@@ -1,0 +1,406 @@
+﻿> Ahmed:
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عقد زواج فاخر - احفظ أجمل لحظات حياتك</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #ffffff;
+            line-height: 1.8;
+        }
+        
+        /* Hero Section - نفس التصميم السابق */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+        
+        .hero-section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 40px;
+            max-width: 900px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #DAA520 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            text-shadow: 0 0 30px rgba(218,165,32,0.5);
+            line-height: 1.2;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.8em;
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            font-weight: 300;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 20px 60px;
+            background: linear-gradient(135deg, #DAA520 0%, #FFD700 100%);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.4em;
+            font-weight: bold;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(218,165,32,0.5);
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 50px rgba(218,165,32,0.7);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-indicator span {
+            display: block;
+            width: 30px;
+            height: 50px;
+            border: 3px solid #DAA520;
+            border-radius: 25px;
+            position: relative;
+        }
+        
+        .scroll-indicator span::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 10px;
+            background: #DAA520;
+            border-radius: 3px;
+            animation: scroll 2s infinite;
+        }
+        
+        /* Text Section */
+        .text-section {
+            padding: 100px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+
+> Ahmed:
+border-bottom: 1px solid rgba(218,165,32,0.2);
+        }
+        
+        .text-section h2 {
+            font-size: 3.5em;
+            color: #DAA520;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
+        
+        .text-section p {
+            font-size: 1.5em;
+            color: #e0e0e0;
+            max-width: 1000px;
+            margin: 0 auto 25px;
+            line-height: 2;
+        }
+        
+        .text-section .highlight {
+            color: #FFD700;
+            font-weight: bold;
+        }
+        
+        /* Image Section */
+        .image-section {
+            background: #000;
+            padding: 60px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .image-section img {
+            width: 100%;
+            max-width: 1400px;
+            height: auto;
+            display: block;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.9);
+        }
+        
+        /* Quote Section */
+        .quote-section {
+            padding: 120px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+        }
+        
+        .quote-section blockquote {
+            font-size: 2em;
+            font-style: italic;
+            color: #DAA520;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            border-right: 5px solid #DAA520;
+            background: rgba(218,165,32,0.05);
+            line-height: 2;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #DAA520 0%, #FFD700 100%);
+            padding: 120px 40px;
+            text-align: center;
+            color: #000;
+        }
+        
+        .final-cta h2 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            font-weight: 900;
+        }
+        
+        .final-cta p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .final-cta .cta-button {
+            background: #000;
+            color: #FFD700;
+            margin-top: 30px;
+            font-size: 1.6em;
+            padding: 25px 70px;
+        }
+        
+        .final-cta .cta-button:hover {
+            background: #1a1a1a;
+            transform: translateY(-8px) scale(1.08);
+        }
+        
+        .features-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .features-list div {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        @keyframes scroll {
+            0% {
+                opacity: 0;
+                top: 10px;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                top: 25px;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.2em;
+
+> Ahmed:
+}
+            
+            .text-section h2 {
+                font-size: 2em;
+            }
+            
+            .text-section p {
+                font-size: 1.1em;
+            }
+            
+            .quote-section blockquote {
+                font-size: 1.3em;
+                padding: 20px;
+            }
+            
+            .final-cta h2 {
+                font-size: 2em;
+            }
+            
+            .final-cta p {
+                font-size: 1.1em;
+            }
+            
+            .features-list {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section - كما هو -->
+    <section class="hero-section">
+        <img src="images/image1.jpg" alt="عقد زواج فاخر">
+        <div class="hero-content">
+            <h1>عقدٌ يليق بميثاقكم الغليظ</h1>
+            <p class="subtitle">احفظوا أجمل لحظات حياتكم في تحفة فنية لا تُنسى</p>
+            <a href="#cta" class="cta-button">احجز الآن - عرض خاص</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Text + Image Pattern -->
+    
+    <!-- Section 1 -->
+    <section class="text-section">
+        <h2>💎 تصميم يأسر القلوب</h2>
+        <p>أسود وذهبي... تناغم يعكس <span class="highlight">الفخامة والأصالة</span></p>
+        <p>كل خط، كل زخرفة، كل تفصيلة صُممت بعناية لتحكي قصة حبكم الفريدة</p>
+        <p>ليس مجرد عقد... إنه <span class="highlight">عمل فني يدوم للأبد</span></p>
+    </section>
+    
+    <section class="image-section">
+        <img src="images/image2.jpg" alt="تصميم فاخر للعقد">
+    </section>
+
+    <!-- Section 2 -->
+    <section class="text-section">
+        <h2>✨ لحظة لن تتكرر</h2>
+        <p>هذه اللحظة... هذا الوعد... هذا الميثاق الغليظ <span class="highlight">يستحق أن يُحفظ بطريقة استثنائية</span></p>
+        <p>عقدنا الفاخر يحمل بركة البداية ويحفظ ذكرى العمر</p>
+    </section>
+    
+    <section class="image-section">
+        <img src="images/image3.jpg" alt="عقد زواج إسلامي">
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <blockquote>
+            "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"
+        </blockquote>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="text-section">
+        <h2>🎁 أفضل هدية تقدمها لهم</h2>
+        <p>هل تبحث عن هدية <span class="highlight">تلمس القلب وتبقى للأبد؟</span></p>
+        <p>عقد الزواج الفاخر ليس مجرد هدية... إنه رسالة حب، تقدير، ودعاء بحياة سعيدة</p>
+        <p>الأمهات، الأصدقاء، العائلة... الكل سيتذكر هديتك <span class="highlight">لأنها من القلب</span></p>
+    </section>
+    
+    <section class="image-section">
+        <img src="images/image4.jpg" alt="هدية عقد زواج">
+    </section>
+
+    <!-- Section 4 -->
+    <section class="text-section">
+        <h2>👑 جودة تليق بكم</h2>
+        <p><span class="highlight">مواد فاخرة</span> · طباعة بجودة عالية · تغليف راقي</p>
+        <p>كل تفصيلة مدروسة بعناية لتحصلوا على منتج يفوق التوقعات</p>
+        <p>قابل للتخصيص بأسمائكم وتاريخكم المميز</p>
+        <p>هذا العقد سيُعلّق في بيتكم... سيراه أولادكم... <span class="highlight">سيحكي قصتكم للأجيال</span></p>
+    </section>
+    
+    <section class="image-section">
+        <img src="images/image5.jpg" alt="جودة عقد الزواج">
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="cta">
+        <h2>🌟 لا تدع هذه اللحظة تمر</h2>
+        <p>عدد محدود متاح - احجز الآن قبل نفاذ الكمية</p>
+        <p style="font-size: 1.8em; font-weight: 800; margin: 30px 0;">⏰ عرض خاص: خصم 20% لأول 50 طلب</p>
+        <a href="#" class="cta-button" onclick="alert('شكراً لاهتمامك! سيتم التواصل معك قريباً'); return false;">اطلب الآن - العرض ينتهي قريباً</a>
+        
+        <div class="features-list">
+            <div>✓ ضمان استرجاع المال</div>
+            <div>✓ شحن مجاني</div>
+            <div>✓ تخصيص مجاني</div>
+            <div>✓ تسليم سريع</div>
+        </div>
+    </section>
